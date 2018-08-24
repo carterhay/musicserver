@@ -1,0 +1,48 @@
+
+<html>
+
+<head>
+</head>
+
+<body>
+  <h1>Carter's Music Server</h1>
+
+  <audio controls preload='none'>
+    <!--<source type='audio/flac'>-->
+  </audio>
+
+  <br/>
+
+  <table class='pure-table'>
+    <thead>
+      <tr>
+        <th>Play</th>
+        <th>Title</th>
+        <th>Album</th>
+        <th>Artist</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{range .songs}}
+        <tr>
+          <td><a href="/music/{{.ID}}" class='song'>Play</a></td>
+          <td>{{.Title}}</td>
+          <td>{{.Artist}}</td>
+          <td>{{.Album}}</td>
+        </tr>
+      {{end}}
+    </tbody>
+  </table>
+
+  <h1>{{.name}}</h1>
+
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/main.css">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
+  <script type='text/javascript' src='assets/main.js'></script>
+<body>
+
+</html>
